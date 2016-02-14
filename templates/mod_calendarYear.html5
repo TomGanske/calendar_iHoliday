@@ -1,0 +1,42 @@
+<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <<?= $this->hl; ?>><?= $this->headline; ?></<?= $this->hl; ?>>
+
+    <a name="calAnchor"></a>
+    <div class="cal_control">
+
+        <a name="calAnchor"></a>
+            <div class="col-xs-12 col-sm-6 subPanel">
+                <span class="span-legend"><?= $GLOBALS['TL_LANG']['FE']['calendar_iHoliday']['legend'] ?></span>
+                <span class="span-block" style="background-color:<?= $this->bg_closing_color ?>;color:<?= $this->c_closing_color ?>;"></span>
+                <span class="span-text"><?= $GLOBALS['TL_LANG']['FE']['calendar_iHoliday']['closingTime'] ?></span>
+                <span class="span-block" style="background-color:<?= $this->bg_event_color ?>;color:<?= $this->c_event_color ?>;"></span>
+                <span class="span-text"><?= $GLOBALS['TL_LANG']['FE']['calendar_iHoliday']['events'] ?></span>
+                <span class="span-block" style="background-color:<?= $this->bg_holiday_color ?>;color:<?= $this->c_holiday_color ?>;"></span>
+                <span class="span-text"><?= $GLOBALS['TL_LANG']['FE']['calendar_iHoliday']['holidays'] ?></span>
+                <span class="span-block" style="background-color:<?= $this->bg_publicHoliday_color ?>;color:<?= $this->c_publicHoliday_color ?>;"></span>
+                <span class="span-text"><?= $GLOBALS['TL_LANG']['FE']['calendar_iHoliday']['publicHolidays'] ?></span>
+            </div>
+            <div class="col-xs-12 col-sm-6 subPanel bg-grey">
+                <span class="span-legend"><?= $GLOBALS['TL_LANG']['FE']['calendar_iHoliday']['calendar'] ?></span>
+                <div class="col-xs-4">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+                    {{link::back}}
+                </div>
+                <div class="col-xs-4">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                    <a href="<?= $this->url ?>?year=<?= $this->prev_year ?>#calAnchor"><?= $this->prev_year ?></a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="<?= $this->url ?>?year=<?= $this->next_year ?>#calAnchor"><?= $this->next_year ?></a>
+                    <i class="glyphicon glyphicon-calendar"></i>
+                </div>
+            </div>
+    </div>
+    <?= $this->calendars ?>
+
+</div>
+
+
+<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    {{link:back}}
+</div>

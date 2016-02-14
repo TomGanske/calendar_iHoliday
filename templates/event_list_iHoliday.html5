@@ -1,0 +1,22 @@
+<div class="eventBox">
+    <div class="eventColorBox eventCell" style="background-color:<?= $this->progress_color ?>"></div>
+    <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2 marginTen">
+        <span class="eventDay"><?= date("d",$this->startDate)?></span>
+        <span class="eventMoYe"><?=  $GLOBALS['TL_LANG']['FE']['calendar_iHoliday']['month'][date('n',$this->startDate)].' '.date("Y",$this->startDate)?></span>
+        <?php if ($this->startDate < $this->endDate): ?>
+        <i class="glyphicon glyphicon-option-vertical f-grey"></i>
+        <span class="eventDay"><?= date("d",$this->endDate)?></span>
+        <span class="eventMoYe"><?=  $GLOBALS['TL_LANG']['FE']['calendar_iHoliday']['month'][date('n',$this->endDate)].' '.date("Y",$this->endDate)?></span>
+        <?php endif; ?>
+    </div>
+    <div class="col-xs-7 col-sm-9 col-md-9 col-lg-9 text-left marginTen eventIconStyle">
+        <span class="eventTeaser"><?= $this->teaser ?></span>
+        <h2><a style="color:<?= $this->progress_color ?>" href="<?= $this->href ?>" title="<?= $this->title ?> (<?php if ($this->day) echo $this->day . ', '; ?><?= $this->date ?><?php if ($this->time) echo ', ' . $this->time; ?>)"<?= $this->target ?>><?= $this->link ?></a></h2>
+        <?php if ($this->addTime): ?>
+        <p><i class="eventIcon glyphicon glyphicon glyphicon-time"></i><?= date("H:i",$this->startTime) ?> - <?= date("H:i",$this->endTime) ?> Uhr</p>
+        <?php endif; ?>
+        <?php if ($this->location): ?>
+        <p><i class="eventIcon glyphicon glyphicon-map-marker"></i><?= $this->location ?></p>
+        <?php endif; ?>
+    </div>
+</div>
