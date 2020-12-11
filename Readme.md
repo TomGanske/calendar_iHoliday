@@ -41,5 +41,3 @@ Open the file below and paste the follow code line into the line 760 of your fil
 
 
 > *Tom Hell*
-
-> [CT-EYE®](http://www.ct-eye.com)
